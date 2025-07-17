@@ -55,5 +55,7 @@ COPY --from=builder /evolution/tsup.config.ts ./tsup.config.ts
 ENV DOCKER_ENV=true
 
 EXPOSE 8080
+COPY wait-for-postgres.sh /wait-for-postgres.sh
+RUN chmod +x /wait-for-postgres.sh
 
 ENTRYPOINT ["/bin/bash", "-c", ". ./Docker/scripts/deploy_database.sh && npm run start:prod" ]

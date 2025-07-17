@@ -8,6 +8,7 @@ services:
       - postgres
     ports:
       - 8080:8080
+    command: ["/wait-for-postgres.sh", "node", "runWithProvider.js"]
     volumes:
       - evolution_instances:/evolution/instances
     networks:
