@@ -39,6 +39,7 @@ lerna-debug.log*
 /test/
 /src/env.yml
 /store
+*.env
 
 /temp/*
 
