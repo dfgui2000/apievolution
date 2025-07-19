@@ -13,6 +13,7 @@ services:
     networks:
       - evolution-net
     env_file:
+      - DATABASE_CONNECTION_URI=postgresql://admin:admin2025@postgres:5432/evolution
       - .env
     expose:
       - 8080
